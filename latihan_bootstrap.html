@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementasi Bootstrap Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<style>
+    /* Default styles */
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    /* Media query untuk layar di bawah 768px */
+    @media (max-width: 768px) {
+        /* Sembunyikan sidebar */
+        aside {
+            display: none;
+        }
+        /* Ubah ukuran teks untuk meningkatkan keterbacaan */
+        body {
+            font-size: 14px;
+        }
+    }
+
+    /* Media query untuk layar besar di atas 1200px */
+    @media (min-width: 1200px) {
+        body {
+            font-size: 18px;
+        }
+    }
+
+    footer {
+            background-color: #343a40; /* Dark background */
+            color: #fff; /* White text */
+            padding: 40px 0; /* Padding for top and bottom */
+        }
+        .footer-column h5 {
+            margin-bottom: 20px; /* Space between the heading and content */
+        }
+        .footer-column ul {
+            list-style-type: none; /* Remove bullets */
+            padding-left: 0; /* Remove padding */
+        }
+        .footer-column ul li a {
+            color: #ddd; /* Light text color for links */
+            text-decoration: none; /* Remove underline */
+        }
+        .footer-column ul li a:hover {
+            color: #fff; /* White text on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+
+      
+        .aside h4 {
+            margin-bottom: 20px; /* Space below the heading */
+            background-color: gray;
+        } 
+        .aside a:hover {
+            color: #f3f7fa; /* Darker shade on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+        h5 {
+            background-color: rgb(117, 19, 245); 
+            color: rgb(234, 224, 224);
+
+        } 
+
+  header {
+    background-color: #6111e3; /* Warna latar belakang header */
+    padding: 5px; /* Padding di sekitar konten header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk header */
+}
+
+.logo-container {
+    display: flex; /* Menyusun logo dan teks dalam satu baris */
+    align-items: center; /* Menyelaraskan logo dan teks secara vertikal */
+}
+
+.logo-container img {
+    width: 100px; /* Lebar logo */
+    height: auto; /* Menjaga rasio aspek logo */
+    margin-right: 5px; /* Jarak antara logo dan teks */
+}
+
+.logo-container h1 {
+    font-size: 48px; /* Ukuran teks */
+    color: #f8f5f5; /* Warna teks */
+    margin: 0; /* Menghapus margin default */
+}
+.logo-container p {
+    font-size: 24px; /* Ukuran teks */
+    color: #f8f5f5; /* Warna teks */
+    margin: 0; /* Menghapus margin default */
+}
+
+         
+       </style>
+</head>
+<body>
+
+    <!-- Container utama untuk membungkus semua elemen -->
+    <div class="container">
+        <!-- Header -->
+        <div class="row">  
+            <div class="col-12 mt-1">
+                <header>
+                    <div class="logo-container">
+                        <img src="images/logo.png" alt="Logo">
+                        <h1>PT Jaya Selalu</h1> 
+                    </div>
+                </header> 
+                </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col-12 mt-1">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Suport</a>
+                <!-- Button for toggling the navbar on smaller screens -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Menu Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Layanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        </div>
+
+  <!-- Konten Utama dan Sidebar -->
+  <div class="row">
+        <!-- Konten Utama -->
+        <div class="col-sm-12 col-md-8">
+            <!-- <main class="bg-white py-3">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet, erat vel lacinia venenatis, libero nisi cursus justo, ut auctor felis odio at sapien. Curabitur aliquet, nisl id pellentesque malesuada, lorem nulla tempor elit, ut feugiat lorem nulla nec arcu. Sed vel lacus id lacus ultrices vehicula. Maecenas dapibus, purus vel ultricies auctor, metus urna consectetur libero, at vehicula libero lacus non risus. Fusce ut urna eu lacus vehicula ultricies. Aliquam erat volutpat.</p>
+            </main> -->
+
+            <main class="container mt-1">
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-4 col-sm-12 mb-1">
+                        <div class="card">
+                            <img src="images/laptop.png" class="card-img-top" alt="laptop">
+                            <div class="card-body">
+                                <h5 class="card-title">Laptop Asus</h5>
+                                <p class="card-text">Spesifikasi atau disebut juga dengan spek adalah informasi mengenai komponen yang telah terpasang di laptop atau komputer, seperti kecepatan prosesor, ukuran RAM, ROM, model</p>
+                                <a href="#" class="btn btn-primary">Add to Card</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4 col-sm-8 mb-1">
+                        <div class="card">
+                            <img src="images/komputer.png" class="card-img-top" alt="Komputer">
+                            <div class="card-body">
+                                <h5 class="card-title">PC Assus</h5>
+                                <p class="card-text">
+                                    Intel® Pentium® G6400 Processor 4.0 GHz (4M Cache)
+                                    Intel® Core™ i3-10100 Processor 3.6 GHz (6M Cache, up to 4.3 GHz).</p>
+                                <a href="#" class="btn btn-primary">Add to Card</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4 col-sm-8 mb-1">
+                        <div class="card">
+                            <img src="images/tablet.png" class="card-img-top" alt="Tablet..">
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet Lenovo</h5>
+                                <p class="card-text">Harga Lenovo LEGION TAB Y700 2024 8.8" Gaming Snapdragon 8+ Gen1 GLOBAL ROM.</p>
+                                <a href="#" class="btn btn-primary">Add to Card</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-sm-12 col-md-4 mt-1">
+            <!-- <!-- <aside class="bg-secondary text-white py-3">  -->
+                    <aside class="bg-light ext-white py-3"> 
+                        <h4>Recent Articles</h4>
+                        <ul>
+                            <li><a href="#">How to Build a Responsive Website</a></li>
+                            <li><a href="#">Understanding Flexbox in CSS</a></li>
+                            <li><a href="#">Top 10 Web Development Trends in 2024</a></li>
+                            <li><a href="#">The Future of JavaScript Frameworks</a></li>
+                            <li><a href="#">Getting Started with Bootstrap 5</a></li>
+                            <li><a href="#">Smartphone</a></li>
+                            <li><a href="#">Internet of Things (IoT)</a></li>
+                            <li><a href="#">Sistem Pembayaran Digital4</a></li>
+                            <li><a href="#">Sistem Navigasi GPS</a></li>
+                            <li><a href="#">Aplikasi Medis dan Kesehatan</a></li>
+                            <li><a href="#">Teknologi Penerjemah Bahasa</a></li>
+                            <li><a href="#">Teknologi Augmented Reality (AR) dan Virtual Reality (VR)</a></li>
+                            <li><a href="#">Sistem Keamanan Rumah Pintar</a></li>
+                            <li><a href="#">Cloud Computing</a></li> 
+                        </ul>
+                    </aside> 
+        </div>
+</div>
+
+<!-- Elemen spesifik berdasarkan ukuran layar -->
+<div class="row">
+    <div class="col-12">
+        <!-- Elemen yang hanya muncul di layar besar -->
+        <div class="d-none d-lg-block bg-success text-white text-center py-2">
+            <p>Konten ini hanya terlihat di layar besar (≥992px).</p>
+        </div>
+
+        <!-- Elemen yang hanya muncul di layar kecil -->
+        <div class="d-block d-md-none bg-warning text-dark text-center py-2">
+            <p>Konten ini hanya terlihat di layar kecil (768px).</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-12 mt-1">  
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <!-- Links Column -->
+                <div class="col-md-4 footer-column">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Tentang</a></li>
+                        <li><a href="#">Layanan</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- About Us Column -->
+                <div class="col-md-4 footer-column">
+                    <h5>Tentang kami</h5>
+                    <p>Kami adalah perusahaan yang berkomitmen untuk memberikan layanan terbaik kepada pelanggan kami. Misi kami adalah memberikan produk berkualitas tinggi dengan dukungan pelanggan yang luar biasa..</p>
+                </div>
+                <!-- Contact Info Column -->
+                <div class="col-md-4 footer-column">
+                    <h5>Contact Info</h5>
+                    <p>Bandung<br>City, Westjava, 23456<br>Email: info@ptkami.com<br>Phone: 081..</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div> 
+
+</div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
